@@ -16,6 +16,7 @@ class second extends StatefulWidget {
 
 class _secondState extends State<second> {
   Future get_data() async {
+    print("this is app");
     List<Map> list;
     String qry = 'select * from note;';
     list = await widget.database!.rawQuery(qry);
@@ -26,6 +27,8 @@ class _secondState extends State<second> {
       return list;
     }
   }
+
+
 
   @override
   Widget build(BuildContext context) {
